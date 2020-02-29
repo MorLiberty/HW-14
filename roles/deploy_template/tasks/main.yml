@@ -1,0 +1,15 @@
+---
+- name: Create directory
+  file:
+    path: "/tmp/test2"
+    state: directory
+
+- name: Ansible create file with content
+  copy:
+    dest: "/tmp/test1/hostname.txt"
+    content: "{{ ansible_facts['hostname'] }}"
+
+- name: Debug 
+  debug:
+    msg: "{{ ansible_facts['hostname'] }}"
+  

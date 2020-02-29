@@ -1,0 +1,11 @@
+---
+- name: Create directory
+  file:
+    path: "/tmp/test1"
+    state: directory
+
+- name: Ansible create file with content
+  copy:
+    dest: "/tmp/test1/hello_world.txt"
+    content: "Hello world!"
+  

@@ -1,0 +1,7 @@
+---
+- hosts: hw-servers
+
+  roles:
+    - common
+    - hello_world
+    - deploy_template
